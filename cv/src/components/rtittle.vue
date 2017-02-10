@@ -1,6 +1,6 @@
 <template>
   <div class="tittle">
-       <div class="tittle-left"></div>
+ 
        <div class="tittle-main"><span>{{title}}</span></div>
   </div>
 </template>
@@ -13,7 +13,7 @@
 
 </script>
 <style lang="scss" scoped>
-  $blue: #2196f3;
+ 
   .tittle {
     flex:1;
     display: flex;
@@ -21,16 +21,11 @@
  
  
   }
-  .tittle-left
-  {
-      width: 2%;
-      background: #4caf50
-      
-  }
+ 
   .tittle-main
   {
       margin-left: 20px;
-      color: white;
+      color: black;
       font-weight: bolder;
       font-size: 30px
   }

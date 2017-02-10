@@ -1,48 +1,64 @@
 <template>
   <div id="app">
-    <div class="name"> <span>{{name}}</span></div>
     <div class="main">
-       
-        <div class="main-left">
-          <div class="hello"><span>hello</span></div>
-          <d-tittle title="abount me"></d-tittle>
-          <desco class="desco" v-for="(item,index) in experiences" v-bind:time="item.time" v-bind:company="item.company" v-bind:experience="item.experience">
-          </desco>
-        </div>
-        <div class="main-right"> </div>
- 
+      <div class="main-left">
+        <div class="hello"><span>hello</span></div>
+        <d-tittle title="abount me"></d-tittle>
+        <div class="name"> <span>{{name}}</span></div>
+         <point v-for="(item,index) in skills" v-bind:skill="item.skill" v-bind:value="item.value"></point>
+      </div>
+      <div class="main-right">
+        <div class="cv"><span>{{mycv}}</span></div>
+         <r-tittle title="experience"> </r-tittle>
+        <desco class="desco" v-for="(item,index) in experiences" v-bind:position="item.position" v-bind:time="item.time" v-bind:company="item.company" v-bind:experience="item.experience">
+        </desco>
+      </div>
     </div>
 </template>
 <script>
   import desc from './components/desc.vue'
-   import tittle from './components/tittle.vue'
+  import tittle from './components/tittle.vue'
+  import rtittle from './components/rtittle.vue'
+  import point from './components/point.vue'
   export default {
     beforeCreate() {
-      console.log(desc)
+     
     },
     data() {
       return {
-        name: "董智含",
+        mycv:"我的vc",
+        name: "xxxxxxxxxxxxxxxxxxxxx",
         experiences: [{
             time: 2000,
             company: "cx",
-            experience: "第一次"
+            experience: "第一次",
+            position:"1"
           },
           {
             time: 2000,
             company: "cx",
-            experience: "第二次"
+            experience: "第二次",
+              position:"2"
           }
 
-        ]
+        ],
+      skills:[
+        {
+          skill:"1",
+          value:80
+
+        }
+      ]
       }
     },
 
 
     components: {
       "desco": desc,
-      "d-tittle":tittle
-    }
+      "d-tittle": tittle,
+      "r-tittle":rtittle,
+      "point" :point
+        }
   }
 
 </script>
@@ -52,19 +68,31 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
-    background: #009688;
+   
     width: 800px;
     margin: 0 auto;
   }
-  
+   .point
+   {
+     width: 100%;
+     height: 50px
+
+   }
+   .cv
+   {
+     font-size: 30px;
+      color: black;
+      text-align: center;
+      font-weight: bolder;
+      margin-bottom: 50px;
+   }
   .name {
-    text-align: center;
-    margin-bottom: 50px
+    margin-bottom: 50px;
+    width: 100%;
+    margin-left: 20px;
   }
   
-  .desco {
-  
-  }
+  .desco {}
   
   .main {
     flex: 1;
@@ -75,7 +103,9 @@
   }
   
   .main-left {
-    width: 40%
+    padding-left: 5%;
+    width: 40%;
+    background: #2a3a4a
   }
   
   .main-right {
@@ -87,7 +117,8 @@
     font-size: 60px;
     font-weight: bolder;
     color: white;
-    margin-bottom: 100px
+    margin-bottom: 100px;
+    margin-left: 20px;
   }
 
 </style>
