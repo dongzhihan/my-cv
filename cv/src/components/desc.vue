@@ -17,7 +17,7 @@
 
 </script>
 <style lang="scss" scoped>
-  $blue: #3bbfce;
+  $blue: #2196f3;
   .desc {
     flex:1;
     display: flex;
