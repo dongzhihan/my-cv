@@ -1,13 +1,30 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+  <div id="app">  
+      <div> <span>{{name}}</span></div>
+     <div>
+            
+            <desco time="2000" company="cx">  </desco>
+     </div>
   </div>
 </template>
 
 <script>
+import desc from './components/desc.vue'
+ 
 export default {
-  name: 'app'
+    beforeCreate () {
+      console.log(desc)
+    },
+   data () {
+     return {
+       name:"董智含"
+     }
+   },
+   
+ 
+        components: {  
+            "desco": desc
+        }  
 }
 </script>
 
