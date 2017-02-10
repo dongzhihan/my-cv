@@ -3,16 +3,19 @@
     <div class="main">
       <div class="main-left">
         <div class="hello"><span>hello</span></div>
-        <d-tittle title="abount me"></d-tittle>
-        <div class="name"> <span>{{name}}</span></div>
-        <d-tittle title="skills"></d-tittle>
-        <div class="skills">
+        <d-tittle title="abount me">
+        <div class="name" slot="children"> <span>{{name}}</span></div>
+        </d-tittle>
+        <d-tittle title="skills">       
+        <div class="skills" slot="children" >
           <point v-for="(item,index) in skills" v-bind:skill="item.skill" v-bind:value="item.value"></point>
         </div>
+</d-tittle> 
+         <d-tittle title="message"></d-tittle>
       </div>
       <div class="main-right">
         <div class="cv"><span>{{mycv}}</span></div>
-        <r-tittle title="experience"> </r-tittle>
+        <r-tittle title="experience"></r-tittle>
         <div>
           <desco class="desco" v-for="(item,index) in experiences" v-bind:position="item.position" v-bind:time="item.time" v-bind:company="item.company"
             v-bind:experience="item.experience">

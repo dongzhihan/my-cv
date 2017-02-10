@@ -1,7 +1,11 @@
 <template>
-  <div class="tittle">
+  <div >
+      <div class="tittle">
        <div class="tittle-left"></div>
-       <div class="tittle-main"><span>{{title}}</span></div>
+       <div class="tittle-main"><span>{{title}}</span> 
+    </div>
+       </div>
+       <slot name="children"></slot>
   </div>
 </template>
 <script>
@@ -24,9 +28,10 @@
   .tittle-left
   {
       width: 2%;
-      background: #4caf50
+      background: #7cc3a7
       
   }
+ 
   .tittle-main
   {
       margin-left: 20px;
