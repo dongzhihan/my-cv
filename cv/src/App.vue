@@ -4,10 +4,10 @@
 
     <div class="main">
       <div>
-        <desco class="desco" time="2000" company="cx" experience="第一次经历"> </desco>
-        <desco class="desco" time="2000" company="cx" experience="第一次经历"> </desco>
-        <desco class="desco" time="2000" company="cx" experience="第一次经历"> </desco>
-      </div>
+        <div >
+        <desco  class="desco" v-for="(item,index) in experiences" v-bind:time="item.time" v-bind:company="item.company" v-bind:experience="item.experience"> </desco>
+ </div>
+ 
     </div>
   </div>
 </template>
@@ -20,7 +20,21 @@
     },
     data() {
       return {
-        name: "董智含"
+        name: "董智含",
+        experiences:
+        [
+                 {
+                   time:2000,
+                   company:"cx",
+                   experience:"第一次"
+                 },
+                   {
+                   time:2000,
+                   company:"cx",
+                   experience:"第二次"
+                 }
+
+        ]
       }
     },
 
@@ -39,7 +53,7 @@
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
     margin-top: 60px;
-        background: green
+        background: green;
   }
   
   .name {
