@@ -5,13 +5,19 @@
         <div class="hello"><span>hello</span></div>
         <d-tittle title="abount me"></d-tittle>
         <div class="name"> <span>{{name}}</span></div>
-         <point v-for="(item,index) in skills" v-bind:skill="item.skill" v-bind:value="item.value"></point>
+        <d-tittle title="skills"></d-tittle>
+        <div class="skills">
+          <point v-for="(item,index) in skills" v-bind:skill="item.skill" v-bind:value="item.value"></point>
+        </div>
       </div>
       <div class="main-right">
         <div class="cv"><span>{{mycv}}</span></div>
-         <r-tittle title="experience"> </r-tittle>
-        <desco class="desco" v-for="(item,index) in experiences" v-bind:position="item.position" v-bind:time="item.time" v-bind:company="item.company" v-bind:experience="item.experience">
-        </desco>
+        <r-tittle title="experience"> </r-tittle>
+        <div>
+          <desco class="desco" v-for="(item,index) in experiences" v-bind:position="item.position" v-bind:time="item.time" v-bind:company="item.company"
+            v-bind:experience="item.experience">
+          </desco>
+        </div>
       </div>
     </div>
 </template>
@@ -22,33 +28,43 @@
   import point from './components/point.vue'
   export default {
     beforeCreate() {
-     
+
     },
     data() {
       return {
-        mycv:"我的vc",
+        mycv: "我的vc",
         name: "xxxxxxxxxxxxxxxxxxxxx",
         experiences: [{
-            time: 2000,
-            company: "cx",
-            experience: "第一次",
-            position:"1"
-          },
-          {
-            time: 2000,
-            company: "cx",
-            experience: "第二次",
-              position:"2"
-          }
+          time: 2000,
+          company: "cx",
+          experience: "第一次",
+          position: "1"
+        },
+        {
+          time: 2000,
+          company: "cx",
+          experience: "第二次",
+          position: "2"
+        }
 
         ],
-      skills:[
-        {
-          skill:"1",
-          value:80
+        skills: [
+          {
+            skill: "1",
+            value: 80
 
-        }
-      ]
+          },
+             {
+            skill: "2",
+            value: 50
+
+          },   {
+            skill: "3",
+            value: 75
+
+          }
+
+        ]
       }
     },
 
@@ -56,9 +72,9 @@
     components: {
       "desco": desc,
       "d-tittle": tittle,
-      "r-tittle":rtittle,
-      "point" :point
-        }
+      "r-tittle": rtittle,
+      "point": point
+    }
   }
 
 </script>
@@ -89,9 +105,13 @@
   .name {
     margin-bottom: 50px;
     width: 100%;
-    margin-left: 20px;
+    margin-left: 24px;
+    color: white
   }
-  
+   .skills
+   {
+         margin-left: 24px;
+   }
   .desco {}
   
   .main {
@@ -103,7 +123,7 @@
   }
   
   .main-left {
-    padding-left: 5%;
+   
     width: 40%;
     background: #2a3a4a
   }
