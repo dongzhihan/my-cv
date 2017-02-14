@@ -26,7 +26,7 @@
     .indiv
     {
      background: #7cc3a7;
-     height: 20px
+     height: 20px;
     }
  
 </style>
