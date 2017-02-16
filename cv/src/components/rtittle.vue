@@ -27,7 +27,7 @@
       margin-left: 20px;
       color: black;
       font-weight: bolder;
-      font-size: 30px
+      font-size: 25px
   }
  
 </style>

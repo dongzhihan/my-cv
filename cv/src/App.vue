@@ -13,8 +13,8 @@
         </d-tittle>
         <d-tittle title="message">
           <div class="message-div" slot="children">
-            <p><b>地址：</b>苏州市吴中区</p>
-            <p><b>电话：</b>+8618550039067</p>
+            <p><b>地址：</b>苏州市工业园区</p>
+            <p><b>电话：</b>18626161645</p>
             <p><b>Email：</b>529211933@qq.com</p>
             <p><b>github：</b><a href="https://dongzhihan.github.com/">https://dongzhihan.github.com/</a></p>
           </div>
@@ -46,21 +46,27 @@
     },
     data() {
       return {
-        mycv: "我的vc",
+        mycv: "我的cv",
         name: "xxxxxxxxxxxxxxxxxxxxx",
         experiences: [{
-          time: 2000,
+          time: "2000-1-2~2000-1-3",
           company: "cx",
-          experience: "第一次",
+          experience: "第一次11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
           position: "1"
         },
         {
-          time: 2000,
+           time: "2000-1-2~2000-1-3",
           company: "cx",
-          experience: "第二次",
+          experience: "第二次1112222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222",
           position: "2"
         }
-
+,
+        {
+           time: "2000-1-2~2000-1-3",
+          company: "cx",
+          experience: "第三次1112222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222",
+          position: "3"
+        }
         ],
         skills: [
           {
@@ -106,7 +112,8 @@
     width: 100%;
     height: 50px
   }
-  
+
+
   .cv {
     font-size: 30px;
     color: black;
