@@ -1,7 +1,7 @@
 <template>
   <div >
       <div class="tittle">
-       <div class="tittle-left"></div>
+       <div ref="qwe" class="tittle-left"></div>
        <div class="tittle-main"><span>{{title}}</span> 
     </div>
        </div>
@@ -10,7 +10,11 @@
 </template>
 <script>
   export default {
-    props: ["title"]
+    props: ["title"],
+    beforeCreate () {
+  
+     
+    }
      
 
   }

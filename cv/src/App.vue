@@ -2,7 +2,7 @@
   <div id="app">
     <div class="main">
       <div class="main-left">
-        <div class="hello"><span>hello</span></div>
+        <div class="hello"><span  ref="hello">hello</span></div>
         <d-tittle title="abount me">
           <div class="name" slot="children"> <span>{{name}}</span></div>
         </d-tittle>
@@ -16,7 +16,7 @@
             <p><b>地址：</b>苏州市工业园区</p>
             <p><b>电话：</b>18626161645</p>
             <p><b>Email：</b>529211933@qq.com</p>
-            <p><b>github：</b><a href="https://dongzhihan.github.com/">https://dongzhihan.github.com/</a></p>
+            <p><b>github：</b><a href="https://github.com/dongzhihan">https://github.com/dongzhihan</a></p>
           </div>
         </d-tittle>
       </div>
@@ -41,9 +41,7 @@
   import rtittle from './components/rtittle.vue'
   import point from './components/point.vue'
   export default {
-    beforeCreate() {
-
-    },
+  
     data() {
       return {
         mycv: "我的cv",
@@ -87,8 +85,7 @@
         ]
       }
     },
-
-
+ 
     components: {
       "desco": desc,
       "d-tittle": tittle,
