@@ -25,8 +25,8 @@
   .tittle {
     flex:1;
     display: flex;
-   
- 
+    
+     margin: 24px 0;
  
   }
   .tittle-left
@@ -38,7 +38,7 @@
  
   .tittle-main
   {
-      margin-left: 20px;
+      margin-left: 40px;
       color: white;
       font-weight: bolder;
       font-size: 30px
