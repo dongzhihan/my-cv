@@ -60,7 +60,7 @@
   }
   
   .time {
-    width: 30%
+    width: 35%
   }
   
   .experience {
@@ -70,7 +70,7 @@
   }
   
   .descRight {
-    width: 60%
+    width: 65%
   }
  
 </style>

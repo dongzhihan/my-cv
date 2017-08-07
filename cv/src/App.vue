@@ -39,6 +39,12 @@
               v-bind:experience="item.experience">
             </desco>
           </div>
+          <r-tittle title="project"></r-tittle>
+          <div>
+            <desco class="desco" v-for="(item,index) in projects" v-bind:position="item.position" v-bind:time="item.time" v-bind:company="item.company"
+              v-bind:experience="item.experience">
+            </desco>
+          </div>
         </div>
       </div>
     </div>
@@ -54,18 +60,38 @@
     data() {
       return {
         mycv: "",
-        name: "2年前端开发经验，参与过多次大型网站的开发，涉及仓库、电商、工厂等方面。 熟悉es6、es7，用过angular、vue等框架，开发过hrbird app，熟练使用git等版本控制工具 为人谦虚谨慎，实事求是，对新技术抱有强烈好奇心。",
-        experiences: [{
+        name: "1年前端开发经验，参与过多次大型网站的开发，涉及仓库、电商、工厂等方面。 熟悉es6、es7，用过angular、vue等框架，开发过hrbird app，熟练使用git等版本控制工具 为人谦虚谨慎，实事求是，对新技术抱有强烈好奇心。",
+        experiences: [
+          {
+            time: "2016-2~2016-4",
+            company: "盟思科技",
+            experience: "负责asp.net类项目wms",
+            position: "软件工程师"
+          },
+          {
             time: "2016-7~至今",
             company: "精易会",
             experience: "负责使用angular和vue对pda、pc端页面编写",
             position: "前端工程师"
+          }
+        ],
+           projects: [{
+            time: "2017-4~至今",
+            company: "仿豆瓣app",
+            experience: "vue+museui+vuex+proxy+webpack+vue-router",
+            position: "前端vue项目+proxy 豆瓣请求"
           },
           {
-            time: "2017-2~至今",
-            company: "业余",
-            experience: "使用vue编写了一个云笔记系统",
-            position: "前端工程师"
+            time: "2017-6~至今",
+            company: "自制云笔记-使用vue编写了一个云笔记系统",
+            experience: "vue+vuex+proxy+webpack+vue-router",
+            position: "前端vue+后端node+mysql"
+          },
+          {
+            time: "2017-8~至今",
+            company: "my-cv自制简历",
+            experience: "vue",
+            position: "前端项目"
           }
         ],
         skills: [{
@@ -143,10 +169,13 @@
   }
 
   .skills {
-        padding: 10px 30px 20px 30px;
+    padding: 10px 30px 20px 30px;
   }
 
-  .desco {}
+  .desco {
+
+    padding: 30px
+  }
 
   .main {
     flex: 1;
