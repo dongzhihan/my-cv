@@ -1,8 +1,8 @@
 <template>
   <div >
       <div class="tittle">
-       <div ref="qwe" class="tittle-left"></div>
-       <div class="tittle-main"><span>{{title}}</span> 
+       <div   class="tittle-left"></div>
+       <div class="tittle-main"><span>{{title}}</span>
     </div>
        </div>
        <slot name="children"></slot>
@@ -12,10 +12,10 @@
   export default {
     props: ["title"],
     beforeCreate () {
-  
-     
+
+
     }
-     
+
 
   }
 
@@ -25,17 +25,17 @@
   .tittle {
     flex:1;
     display: flex;
-    
+
      margin: 24px 0;
- 
+
   }
   .tittle-left
   {
       width: 2%;
       background: #7cc3a7
-      
+
   }
- 
+
   .tittle-main
   {
       margin-left: 40px;
@@ -43,5 +43,5 @@
       font-weight: bolder;
       font-size: 30px
   }
- 
+
 </style>
